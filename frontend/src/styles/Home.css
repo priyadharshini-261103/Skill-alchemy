@@ -1,0 +1,98 @@
+.home-container {
+  margin: 3rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.search-bar, .category-filter {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus, .category-filter:focus {
+  border-color: #2a5298;
+  box-shadow: 0 0 5px rgba(42, 82, 152, 0.3);
+  outline: none;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.course-box {
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  border-left: 5px solid #2a5298;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.course-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.course-box:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.5);
+}
+
+.featured-course {
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: #f9f9f9;
+  border-left: 5px solid #ffb400;
+  position: relative;
+}
+
+.enroll-button, .go-to-course {
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+  margin-top: 1rem;
+}
+
+.enroll-button:hover, .go-to-course:hover {
+  background: #1a3363;
+  transform: scale(1.05);
+}
+
+.enroll-button:focus, .go-to-course:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 1rem;
+  }
+
+  .course-box {
+    padding: 1rem;
+  }
+
+  .enroll-button, .go-to-course {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}

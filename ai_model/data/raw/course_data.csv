@@ -1,0 +1,4 @@
+course_id,course_name,category,difficulty
+101,Python Basics,Programming,Beginner
+102,Data Structures,CS Core,Intermediate
+103,Machine Learning,AI & ML,Advanced

@@ -1,0 +1,130 @@
+/* Dashboard Container */
+.dashboard-container {
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #f9fafb; /* Light grey background for contrast */
+  border-radius: 12px; /* Slightly more rounded corners */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  text-align: center;
+  max-width: 1200px; /* Limit width for better readability */
+}
+
+/* Dashboard Section */
+.dashboard-section {
+  margin-top: 2rem;
+  text-align: left; /* Align text to the left */
+}
+
+/* Courses Grid */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Increase min-width for better spacing */
+  gap: 2rem; /* Increase gap for better spacing */
+  margin-top: 2rem;
+}
+
+/* Course Box */
+.course-box {
+  padding: 2rem; /* Increase padding for more space */
+  border-radius: 12px; /* More rounded corners */
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  text-align: left;
+  position: relative;
+  border-left: 6px solid #2a5298; /* Slightly thicker border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-box:hover {
+  transform: translateY(-8px); /* Increase hover effect */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Softer shadow on hover */
+}
+
+/* Heading */
+.course-box h3 {
+  margin: 0 0 1rem 0;
+  color: #1e3c72;
+  font-size: 1.6rem; /* Increase font size */
+  font-weight: bold; /* Bold heading */
+}
+
+/* Paragraph */
+.course-box p {
+  margin: 0.5rem 0;
+  color: #555;
+  font-size: 1rem; /* Standardize font size */
+  line-height: 1.6; /* Improve readability */
+}
+
+/* Progress Bar */
+.progress-bar {
+  height: 1.2rem; /* Increase height for better visibility */
+  border-radius: 6px; /* More rounded corners */
+  background: #e6e6e6; /* Light grey background */
+  overflow: hidden;
+  margin: 1rem 0;
+  position: relative;
+}
+
+.progress-bar-inner {
+  height: 100%;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  width: 0; /* Set initial width to 0 for animation */
+  transition: width 0.6s ease-in-out;
+}
+
+/* Buttons */
+.enroll-button, .go-to-course {
+  display: inline-block; /* Ensure buttons are inline */
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  border: none;
+  border-radius: 8px; /* Slightly more rounded corners */
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+  margin-top: 1rem; /* Add margin for spacing */
+}
+
+.enroll-button:hover, .go-to-course:hover {
+  background: #1a3363;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.enroll-button:focus, .go-to-course:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.5);
+}
+
+/* Animation */
+.course-box {
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 1rem;
+  }
+
+  .course-box {
+    padding: 1rem;
+  }
+
+  .enroll-button, .go-to-course {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}

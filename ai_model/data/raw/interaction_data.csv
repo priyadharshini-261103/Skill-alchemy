@@ -1,0 +1,4 @@
+student_id,course_id,progress,rating,preference
+1,101,90,5,0.8
+1,102,75,4,0.7
+2,103,60,3,0.5
